@@ -35,6 +35,14 @@
 
 This will try to look for possible match from first and last few pages of the book and metadata. If a match is found and validated, the ISBN will be appended to the filename (`%filename_[ISBN].%ext`)
 
+## USAGE
+
+```bash
+ ruby extract-isbn.rb -r dir
+```
+
+You can specify `-r` options to look for files recursively
+
 ## Requirements
 
 Behind the scenes this package leverages [pdftotext](https://poppler.freedesktop.org/). You can verify if the binary installed on your system by issueing this command:
@@ -70,11 +78,3 @@ Script requires `lisbn` gem to be installed
 ```bash
 gem install --user lisbn
 ```
-
-## USAGE
-
-```bash
- ruby extract-isbn.rb -r dir
-```
-
-You can specify `-r` options to look for files recursively
